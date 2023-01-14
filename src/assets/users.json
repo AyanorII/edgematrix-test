@@ -1,0 +1,565 @@
+[
+  {
+    "gender": "male",
+    "name": {
+      "title": "Monsieur",
+      "first": "Ruben",
+      "last": "Girard"
+    },
+    "location": {
+      "street": {
+        "number": 3111,
+        "name": "Rue Bataille"
+      },
+      "city": "Safiental",
+      "state": "Ticino",
+      "country": "Switzerland",
+      "postcode": 3067,
+      "timezone": {
+        "offset": "+11:00",
+        "description": "Magadan, Solomon Islands, New Caledonia"
+      }
+    },
+    "email": "ruben.girard@example.com",
+    "dob": {
+      "date": "1990-07-28T10:33:15.388Z",
+      "age": 32
+    },
+    "phone": "078 215 86 33",
+    "cell": "075 209 17 49",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/men/11.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/men/11.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/men/11.jpg"
+    },
+    "nat": "CH",
+    "bio": "Incurable pop cultureaholic. Total introvert. Beer specialist. Music practitioner. Communicator. Wannabe gamer.",
+    "id": "f7827c5a-aa7a-4389-b9f6-c310647c63f2"
+  },
+  {
+    "gender": "male",
+    "name": {
+      "title": "Mr",
+      "first": "Christopher",
+      "last": "Fletcher"
+    },
+    "location": {
+      "street": {
+        "number": 3361,
+        "name": "George Street"
+      },
+      "city": "Stirling",
+      "state": "Isle of Wight",
+      "country": "United Kingdom",
+      "postcode": "UA87 0AZ",
+      "timezone": {
+        "offset": "-6:00",
+        "description": "Central Time (US & Canada), Mexico City"
+      }
+    },
+    "email": "christopher.fletcher@example.com",
+    "dob": {
+      "date": "1993-08-09T15:31:54.705Z",
+      "age": 29
+    },
+    "phone": "01930 329309",
+    "cell": "07847 034823",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/men/70.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/men/70.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/men/70.jpg"
+    },
+    "nat": "GB",
+    "bio": "Alcohol specialist. Zombie guru. Freelance food evangelist. Hardcore coffee nerd.",
+    "id": "e5f301df-bc88-4ef6-ad1f-becbe533b366"
+  },
+  {
+    "gender": "male",
+    "name": {
+      "title": "Mr",
+      "first": "Walter",
+      "last": "Porter"
+    },
+    "location": {
+      "street": {
+        "number": 1034,
+        "name": "Dublin Road"
+      },
+      "city": "Dunboyne",
+      "state": "Leitrim",
+      "country": "Ireland",
+      "postcode": 52686,
+
+      "timezone": {
+        "offset": "+2:00",
+        "description": "Kaliningrad, South Africa"
+      }
+    },
+    "email": "walter.porter@example.com",
+    "dob": {
+      "date": "1989-05-13T08:42:42.014Z",
+      "age": 33
+    },
+    "phone": "011-682-2129",
+    "cell": "081-144-8699",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/men/3.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/men/3.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/men/3.jpg"
+    },
+    "nat": "IE",
+    "bio": "Coffee buff. Award-winning bacon scholar. Hipster-friendly troublemaker. Amateur alcohol specialist. Web lover.",
+    "id": "3700c186-ff31-4496-89df-5a0ff6e1625f"
+  },
+  {
+    "gender": "male",
+    "name": {
+      "title": "Mr",
+      "first": "Porfírio",
+      "last": "Fernandes"
+    },
+    "location": {
+      "street": {
+        "number": 7051,
+        "name": "Beco dos Namorados"
+      },
+      "city": "Petrópolis",
+      "state": "Ceará",
+      "country": "Brazil",
+      "postcode": 27682,
+
+      "timezone": {
+        "offset": "+9:00",
+        "description": "Tokyo, Seoul, Osaka, Sapporo, Yakutsk"
+      }
+    },
+    "email": "porfirio.fernandes@example.com",
+    "dob": {
+      "date": "1999-11-16T09:08:28.938Z",
+      "age": 23
+    },
+    "phone": "(95) 7617-2537",
+    "cell": "(70) 8023-4871",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/men/62.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/men/62.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/men/62.jpg"
+    },
+    "nat": "BR",
+    "bio": "Twitter guru. Hipster-friendly gamer. Incurable analyst. Creator. Professional bacon scholar. Tv fanatic.",
+    "id": "656ba27d-cbe7-4080-932e-aa75299c6724"
+  },
+  {
+    "gender": "male",
+    "name": {
+      "title": "Mr",
+      "first": "Benito",
+      "last": "Mora"
+    },
+    "location": {
+      "street": {
+        "number": 3375,
+        "name": "Calle de Bravo Murillo"
+      },
+      "city": "Córdoba",
+      "state": "Canarias",
+      "country": "Spain",
+      "postcode": 47123,
+
+      "timezone": {
+        "offset": "0:00",
+        "description": "Western Europe Time, London, Lisbon, Casablanca"
+      }
+    },
+    "email": "benito.mora@example.com",
+
+    "dob": {
+      "date": "1975-02-16T14:50:25.862Z",
+      "age": 47
+    },
+    "phone": "974-508-246",
+    "cell": "650-428-335",
+
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/men/39.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/men/39.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/men/39.jpg"
+    },
+    "nat": "ES",
+    "bio": "Organizer. General writer. Friend of animals everywhere. Pop culture specialist. Amateur internet expert. Explorer.",
+    "id": "0771f164-3b8e-42c1-9055-f81163329f82"
+  },
+  {
+    "gender": "male",
+    "name": {
+      "title": "Mr",
+      "first": "Darius",
+      "last": "Toth"
+    },
+    "location": {
+      "street": {
+        "number": 2852,
+        "name": "Dorfstraße"
+      },
+      "city": "Bad Salzdetfurth",
+      "state": "Hamburg",
+      "country": "Germany",
+      "postcode": 85291,
+
+      "timezone": {
+        "offset": "-10:00",
+        "description": "Hawaii"
+      }
+    },
+    "email": "darius.toth@example.com",
+    "dob": {
+      "date": "1987-09-17T21:10:15.904Z",
+      "age": 35
+    },
+    "phone": "0295-6489122",
+    "cell": "0177-9518870",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/men/10.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/men/10.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/men/10.jpg"
+    },
+    "nat": "DE",
+    "bio": "Professional food aficionado. Bacon specialist. Analyst. Subtly charming social media fanatic.",
+    "id": "93941aec-d8d0-45dd-af66-1368f0f324cb"
+  },
+  {
+    "gender": "male",
+    "name": {
+      "title": "Mr",
+      "first": "Srećko",
+      "last": "Danilović"
+    },
+    "location": {
+      "street": {
+        "number": 1004,
+        "name": "Milana Milovanovića"
+      },
+      "city": "Nova Varoš",
+      "state": "Kolubara",
+      "country": "Serbia",
+      "postcode": 35573,
+      "timezone": {
+        "offset": "+6:00",
+        "description": "Almaty, Dhaka, Colombo"
+      }
+    },
+    "email": "srecko.danilovic@example.com",
+    "dob": {
+      "date": "1991-10-15T05:38:39.152Z",
+      "age": 31
+    },
+    "phone": "022-7424-174",
+    "cell": "065-7261-434",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/men/17.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/men/17.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/men/17.jpg"
+    },
+    "nat": "RS",
+    "bio": "Avid music specialist. Tv advocate. Beer trailblazer. Pop culture fanatic. Certified explorer. Alcohol nerd. Analyst.",
+    "id": "3a185a82-637c-43ac-aa65-42fcf3402768"
+  },
+  {
+    "gender": "male",
+    "name": {
+      "title": "Mr",
+      "first": "Corentin",
+      "last": "Blanc"
+    },
+    "location": {
+      "street": {
+        "number": 8312,
+        "name": "Rue Bony"
+      },
+      "city": "Toulon",
+      "state": "Deux-Sèvres",
+      "country": "France",
+      "postcode": 25660,
+
+      "timezone": {
+        "offset": "+3:30",
+        "description": "Tehran"
+      }
+    },
+    "email": "corentin.blanc@example.com",
+    "dob": {
+      "date": "1981-12-31T21:26:53.475Z",
+      "age": 41
+    },
+    "phone": "04-65-97-80-29",
+    "cell": "06-50-02-66-44",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/men/21.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/men/21.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/men/21.jpg"
+    },
+    "nat": "FR",
+    "bio": "Social media advocate. Troublemaker. General beeraholic. Certified travel nerd. Pop culture expert.",
+    "id": "ac5848b2-5c3e-4c15-a5d1-65a5b8098f2c"
+  },
+  {
+    "gender": "female",
+    "name": {
+      "title": "Miss",
+      "first": "Suzanne",
+      "last": "Mitchelle"
+    },
+    "location": {
+      "street": {
+        "number": 4362,
+        "name": "Brick Kiln Road"
+      },
+      "city": "Plymouth",
+      "state": "Cambridgeshire",
+      "country": "United Kingdom",
+      "postcode": "DB17 3FG",
+      "timezone": {
+        "offset": "0:00",
+        "description": "Western Europe Time, London, Lisbon, Casablanca"
+      }
+    },
+    "email": "suzanne.mitchelle@example.com",
+    "dob": {
+      "date": "1978-01-25T18:20:29.763Z",
+      "age": 44
+    },
+    "phone": "013873 04420",
+    "cell": "07416 671683",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/women/47.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/women/47.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/women/47.jpg"
+    },
+    "nat": "GB",
+    "bio": "Proud bacon ninja. Freelance tv fan. Travel maven. Internet fanatic. Zombie geek. Unapologetic beeraholic.",
+    "id": "55344d01-1d6a-4524-9f7d-4f0e10ebce56"
+  },
+  {
+    "gender": "male",
+    "name": {
+      "title": "Mr",
+      "first": "Ahmet",
+      "last": "Aşıkoğlu"
+    },
+    "location": {
+      "street": {
+        "number": 2938,
+        "name": "Vatan Cd"
+      },
+      "city": "Kırşehir",
+      "state": "Sinop",
+      "country": "Turkey",
+      "postcode": 61274,
+
+      "timezone": {
+        "offset": "+4:30",
+        "description": "Kabul"
+      }
+    },
+    "email": "ahmet.asikoglu@example.com",
+    "dob": {
+      "date": "1957-10-19T07:04:15.337Z",
+      "age": 65
+    },
+    "phone": "(290)-033-5522",
+    "cell": "(689)-599-9285",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/men/1.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/men/1.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/men/1.jpg"
+    },
+    "nat": "TR",
+    "bio": "Web scholar. Communicator. Introvert. Incurable organizer. Reader. Friendly gamer.",
+    "id": "5eca8c1d-96b0-4ca6-b9d8-3b2791782b66"
+  },
+  {
+    "gender": "male",
+    "name": {
+      "title": "Mr",
+      "first": "Brent",
+      "last": "Williamson"
+    },
+    "location": {
+      "street": {
+        "number": 2501,
+        "name": "Oak Ridge Ln"
+      },
+      "city": "Green Bay",
+      "state": "Arizona",
+      "country": "United States",
+      "postcode": 38627,
+      "timezone": {
+        "offset": "+8:00",
+        "description": "Beijing, Perth, Singapore, Hong Kong"
+      }
+    },
+    "email": "brent.williamson@example.com",
+    "dob": {
+      "date": "1994-03-19T12:58:29.193Z",
+      "age": 28
+    },
+    "phone": "(507) 832-4741",
+    "cell": "(547) 860-8436",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/men/86.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/men/86.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/men/86.jpg"
+    },
+    "nat": "US",
+    "bio": "Alcohol fanatic. Internet ninja. Award-winning food geek. General coffee enthusiast. Amateur music evangelist.",
+    "id": "1cd9468b-bc9f-4b90-aca6-3c9b1af3b540"
+  },
+  {
+    "gender": "female",
+    "name": {
+      "title": "Mrs",
+      "first": "Esther",
+      "last": "Dean"
+    },
+    "location": {
+      "street": {
+        "number": 2884,
+        "name": "Fincher Rd"
+      },
+      "city": "Coffs Harbour",
+      "state": "Australian Capital Territory",
+      "country": "Australia",
+      "postcode": 8948,
+      "timezone": {
+        "offset": "+11:00",
+        "description": "Magadan, Solomon Islands, New Caledonia"
+      }
+    },
+    "email": "esther.dean@example.com",
+    "dob": {
+      "date": "1986-04-03T02:04:17.878Z",
+      "age": 36
+    },
+    "phone": "00-7985-3565",
+    "cell": "0481-858-886",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/women/38.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/women/38.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/women/38.jpg"
+    },
+    "nat": "AU",
+    "bio": "Evil coffee geek. Unapologetic entrepreneur. Hipster-friendly internet evangelist. Communicator.",
+    "id": "dbd4a381-8ca1-430d-8d34-ded32f6e32b9"
+  },
+  {
+    "gender": "female",
+    "name": {
+      "title": "Mrs",
+      "first": "Afet",
+      "last": "Kurutluoğlu"
+    },
+    "location": {
+      "street": {
+        "number": 5758,
+        "name": "Abanoz Sk"
+      },
+      "city": "Edirne",
+      "state": "Rize",
+      "country": "Turkey",
+      "postcode": 92689,
+      "timezone": {
+        "offset": "+3:00",
+        "description": "Baghdad, Riyadh, Moscow, St. Petersburg"
+      }
+    },
+    "email": "afet.kurutluoglu@example.com",
+    "dob": {
+      "date": "1987-11-19T21:17:15.999Z",
+      "age": 35
+    },
+    "phone": "(968)-954-5778",
+    "cell": "(300)-900-1801",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/women/79.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/women/79.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/women/79.jpg"
+    },
+    "nat": "TR",
+    "bio": "Hipster-friendly coffee nerd. Extreme travel trailblazer. Tv scholar. Freelance music fan. Bacon maven.",
+    "id": "0c35e4de-8b99-4f94-be6a-fed34a5297d9"
+  },
+  {
+    "gender": "female",
+    "name": {
+      "title": "Ms",
+      "first": "Paula",
+      "last": "Miller"
+    },
+    "location": {
+      "street": {
+        "number": 5033,
+        "name": "Frances Ct"
+      },
+      "city": "Brisbane",
+      "state": "Victoria",
+      "country": "Australia",
+      "postcode": 9751,
+      "timezone": {
+        "offset": "-10:00",
+        "description": "Hawaii"
+      }
+    },
+    "email": "paula.miller@example.com",
+    "dob": {
+      "date": "1990-11-26T13:32:34.821Z",
+      "age": 32
+    },
+    "phone": "06-4235-5711",
+    "cell": "0486-035-320",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/women/77.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/women/77.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/women/77.jpg"
+    },
+    "nat": "AU",
+    "bio": "Professional social media nerd. Proud pop culture advocate. Web aficionado. Beer expert. Communicator. Zombie buff.",
+    "id": "7b985890-9154-4355-8c07-a6c0b5d2dcda"
+  },
+  {
+    "gender": "male",
+    "name": {
+      "title": "Mr",
+      "first": "Djalmo",
+      "last": "Freitas"
+    },
+    "location": {
+      "street": {
+        "number": 1714,
+        "name": "Avenida da Democracia"
+      },
+      "city": "Sertãozinho",
+      "state": "Rondônia",
+      "country": "Brazil",
+      "postcode": 61869,
+      "timezone": {
+        "offset": "+10:00",
+        "description": "Eastern Australia, Guam, Vladivostok"
+      }
+    },
+    "email": "djalmo.freitas@example.com",
+    "dob": {
+      "date": "1990-11-26T13:32:34.821Z",
+      "age": 32
+    },
+    "phone": "(85) 0354-3965",
+    "cell": "(95) 2987-3480",
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/men/69.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/men/69.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/men/69.jpg"
+    },
+    "nat": "BR",
+    "bio": "Thinker. Pop culture junkie. Coffeeaholic. Avid food nerd. Communicator. General problem solver. Web maven.",
+    "id": "c76af81f-4631-441e-9ec4-54abde104b95"
+  }
+]
