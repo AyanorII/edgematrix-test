@@ -2,7 +2,7 @@
 import type { User } from "@/interfaces/user";
 import { computed } from "vue";
 import { RouterLink } from "vue-router";
-import Card from "../Card.vue";
+import Card from "../UI/Card.vue";
 
 const props = defineProps<{
   user: User;
