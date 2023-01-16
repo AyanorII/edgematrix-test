@@ -1,12 +1,21 @@
 <script setup lang="ts">
 import data from "@/assets/users.json";
 import PageHeading from "@/components/PageHeading.vue";
+import Input from "@/components/UI/Input.vue";
+import Select from "@/components/UI/Select.vue";
 import UserProfilesList from "@/components/UserProfiles/UserProfilesList.vue";
 import type { User } from "@/interfaces/user";
 import { computed, ref } from "vue";
 import { getFullName } from "../lib/helpers/getFullName";
 import type { SortOrder } from "../lib/helpers/sort";
 import { sort } from "../lib/helpers/sort";
+
+type SortBy = "name cres" | "name desc" | "bio cres" | "bio desc";
+
+type SortByOption = {
+  value: SortBy;
+  label: string;
+};
 
 const users: User[] = data as unknown as User[];
 
@@ -18,6 +27,13 @@ const filteredUsers = computed(() =>
     return fullName.includes(filterName.value.toLowerCase());
   })
 );
+
+const sortByOptions: SortByOption[] = [
+  { value: "name cres", label: "Name cres" },
+  { value: "name desc", label: "Name desc" },
+  { value: "bio cres", label: "Bio cres" },
+  { value: "bio desc", label: "Bio desc" },
+];
 
 const sortBy = ref("name cres");
 
@@ -55,23 +71,19 @@ const sortedUsers = computed(() =>
     </PageHeading>
 
     <form id="filter-sort-options">
-      <div class="form-control">
-        <label for="filter-name">Search by name</label>
-        <input
-          v-model="filterName"
-          id="filter-name"
-          placeholder="e.g. John Doe"
-        />
-      </div>
-      <div class="form-control">
-        <label for="sort-by">Sort by</label>
-        <select name="" id="sort-by" v-model="sortBy" class="select">
-          <option value="name cres">Name cres</option>
-          <option value="name desc">Name desc</option>
-          <option value="bio cres">Bio cres</option>
-          <option value="bio desc">Bio desc</option>
-        </select>
-      </div>
+      <Input
+        id="filter-name"
+        placeholder="e.g. John Doe"
+        label="Search by name"
+        type="text"
+        v-model="filterName"
+      />
+      <Select
+        id="sort-by"
+        label="Sort by"
+        :options="sortByOptions"
+        v-model="sortBy"
+      />
     </form>
   </div>
   <UserProfilesList :users="sortedUsers" />
@@ -94,30 +106,6 @@ const sortedUsers = computed(() =>
 #filter-sort-options {
   display: flex;
   gap: 1rem;
-  width: 100%;
-
-  label {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-  }
-
-  input,
-  select {
-    padding: 0.75rem 1rem;
-    border: none;
-    border-radius: 4px;
-    width: 100%;
-
-    @media (min-width: 768px) {
-      max-width: 300px;
-    }
-  }
-}
-.form-control {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
   width: 100%;
 }
 </style>
