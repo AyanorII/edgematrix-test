@@ -29,7 +29,6 @@ const fullName = computed(
 .card {
   &__picture {
     object-fit: cover;
-    max-height: 200px;
     width: 100%;
   }
 
