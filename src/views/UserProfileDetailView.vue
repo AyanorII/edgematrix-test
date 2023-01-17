@@ -17,7 +17,10 @@ const fullName = computed(() => getFullName(user));
 
 <template>
   <div class="page">
-    <RouterLink to="/">Go back</RouterLink>
+    <RouterLink to="/" class="go-back-button">
+      <FontAwesomeIcon icon="chevron-left"/>
+      Go back
+    </RouterLink>
     <div class="user">
       <img :src="user.picture.large" :alt="fullName" class="user__image" />
       <div class="right-side">
@@ -42,6 +45,26 @@ const fullName = computed(() => getFullName(user));
 
   @media (min-width: 768px) {
     margin-top: 3rem;
+  }
+}
+
+.go-back-button {
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    transition: all 0.15s ease-in-out;
+  }
+
+  &:hover::before {
+    width: 100%;
+    background-color: #42b983;
   }
 }
 

@@ -7,6 +7,7 @@ import {
   faMars,
   faPhone,
   faVenus,
+  faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { createApp } from "vue";
@@ -22,7 +23,8 @@ library.add(
   faCakeCandles,
   faPhone,
   faLocationDot,
-  faEarthAmericas
+  faEarthAmericas,
+  faChevronLeft
 );
 
 app.use(router);
