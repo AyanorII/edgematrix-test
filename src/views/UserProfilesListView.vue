@@ -95,7 +95,7 @@ const sortedUsers = computed(() =>
   flex-direction: column;
   gap: 1rem;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-block: 2rem;
 
   h1 {
     flex-grow: 1;
@@ -103,6 +103,7 @@ const sortedUsers = computed(() =>
   }
 
   @media (min-width: 768px) {
+    margin-top: 3rem;
     flex-direction: row;
     align-items: center;
   }

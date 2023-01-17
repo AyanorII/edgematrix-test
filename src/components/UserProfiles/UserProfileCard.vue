@@ -35,7 +35,7 @@ const fullName = computed(
 
   &__body {
     padding: 1rem;
-    color: white;
+    color: #F5F5F5;
   }
 
   &__name {

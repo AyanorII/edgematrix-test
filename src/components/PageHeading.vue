@@ -6,8 +6,16 @@
 
 <style scoped lang="scss">
 .heading {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
-  color: #F5F5F5;
+  color: #f5f5f5;
+
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 3rem;
+  }
 }
 </style>
