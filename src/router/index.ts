@@ -9,6 +9,11 @@ const router = createRouter({
       name: "home",
       component: UserProfiles,
     },
+    {
+      path: "/:id",
+      name: "user",
+      component: () => import("../views/UserProfileDetailView.vue"),
+    },
   ],
 });
 
