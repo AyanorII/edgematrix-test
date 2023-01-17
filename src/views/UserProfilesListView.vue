@@ -61,7 +61,7 @@ const sortedUsers = computed(() =>
 <template>
   <div class="header">
     <PageHeading v-if="sortedUsers.length === users.length">
-      All Users({{ sortedUsers.length }})
+      All Users ({{ sortedUsers.length }})
     </PageHeading>
     <PageHeading v-else-if="sortedUsers.length === 0 && users.length !== 0">
       No users found with name: "{{ filterName }}"
@@ -96,6 +96,11 @@ const sortedUsers = computed(() =>
   gap: 1rem;
   justify-content: space-between;
   margin-bottom: 2rem;
+
+  h1 {
+    flex-grow: 1;
+    width: 100%;
+  }
 
   @media (min-width: 768px) {
     flex-direction: row;

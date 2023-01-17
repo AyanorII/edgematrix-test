@@ -6,9 +6,8 @@
 
 <style scoped lang="scss">
 .heading {
-  font-size: 2.5rem;
-  font-weight: 500;
-  flex-grow: 1;
-  width: 100%;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #F5F5F5;
 }
 </style>
