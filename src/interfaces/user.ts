@@ -13,7 +13,7 @@ export interface User {
 }
 
 export interface DateOfBirth {
-  date: Date;
+  date: string;
   age: number;
 }
 
