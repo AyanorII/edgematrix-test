@@ -14,15 +14,15 @@ const fullName = computed(
 </script>
 
 <template>
-  <Card>
-    <RouterLink :to="'/' + user.id">
+  <RouterLink :to="'/' + user.id">
+    <Card>
       <img class="card__picture" :src="user.picture.large" alt="user.name" />
       <div class="card__body">
         <h2 class="card__name">{{ fullName }}</h2>
         <p class="card__bio">{{ user.bio }}</p>
       </div>
-    </RouterLink>
-  </Card>
+    </Card>
+  </RouterLink>
 </template>
 
 <style scoped lang="scss">
@@ -30,11 +30,16 @@ const fullName = computed(
   &__picture {
     object-fit: cover;
     width: 100%;
+    max-height: 300px;
+
+    @media (min-width: 768px) {
+      max-height: unset;
+    }
   }
 
   &__body {
     padding: 1rem;
-    color: #F5F5F5;
+    color: #f5f5f5;
   }
 
   &__name {

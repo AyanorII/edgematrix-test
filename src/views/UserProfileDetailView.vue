@@ -2,8 +2,9 @@
 import data from "@/assets/users.json";
 import PageHeading from "@/components/PageHeading.vue";
 import UserInfoList from "@/components/UserProfiles/UserInfoList.vue";
+import UserProfilesList from "@/components/UserProfiles/UserProfilesList.vue";
 import type { User } from "@/interfaces/user";
-import { getFullName } from "@/lib/helpers";
+import { getFullName, shuffle } from "@/lib/helpers";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { computed } from "vue";
 import { useRoute } from "vue-router";
@@ -12,13 +13,16 @@ const route = useRoute();
 const id = route.path.split("/")[1];
 const user = data.find((u) => u.id === id) as unknown as User;
 
+const otherUsers = data.filter((u) => u.id !== id) as User[];
+const randomUsers = shuffle(otherUsers).slice(0, 4);
+
 const fullName = computed(() => getFullName(user));
 </script>
 
 <template>
   <div class="page">
     <RouterLink to="/" class="go-back-button">
-      <FontAwesomeIcon icon="chevron-left"/>
+      <FontAwesomeIcon icon="chevron-left" />
       Go back
     </RouterLink>
     <div class="user">
@@ -35,6 +39,10 @@ const fullName = computed(() => getFullName(user));
         <p id="bio">{{ user.bio }}</p>
         <UserInfoList :user="user" />
       </div>
+    </div>
+    <div class="users-list">
+      <h2>Other users</h2>
+      <UserProfilesList :users="randomUsers" />
     </div>
   </div>
 </template>
@@ -114,5 +122,16 @@ img {
   margin-block: 1rem;
   font-size: 1rem;
   line-height: 1.5;
+}
+
+.users-list {
+  margin-top: 3rem;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
 }
 </style>
