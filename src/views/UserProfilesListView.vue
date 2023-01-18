@@ -4,18 +4,9 @@ import PageHeading from "@/components/PageHeading.vue";
 import Input from "@/components/UI/Input.vue";
 import Select from "@/components/UI/Select.vue";
 import UserProfilesList from "@/components/UserProfiles/UserProfilesList.vue";
-import type { User } from "@/interfaces/user";
+import type { SortByOption, SortOrder, User } from "@/interfaces";
+import { getFullName, sort } from "@/lib/helpers";
 import { computed, ref } from "vue";
-import { getFullName } from "../lib/helpers/getFullName";
-import type { SortOrder } from "../lib/helpers/sort";
-import { sort } from "../lib/helpers/sort";
-
-type SortBy = "name cres" | "name desc" | "bio cres" | "bio desc";
-
-type SortByOption = {
-  value: SortBy;
-  label: string;
-};
 
 const users: User[] = data as unknown as User[];
 
