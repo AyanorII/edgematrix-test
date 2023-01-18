@@ -2,7 +2,7 @@
 import { getCountry } from "@/lib/helpers";
 import type { RestCountriesApiResponse, User } from "@/lib/interfaces";
 import { computed, onUpdated, ref } from "vue";
-import UserInfoItem from "./UserInfoItem.vue";
+import UserInfoListItem from "./UserInfoListItem.vue";
 
 const props = defineProps<{
   user: User;
@@ -43,26 +43,31 @@ onUpdated(async () => {
 
 <template>
   <ul class="user__info">
-    <UserInfoItem
+    <UserInfoListItem
       id="email"
       icon="envelope"
       label="Email: "
       :value="user.email"
     />
-    <UserInfoItem
+    <UserInfoListItem
       id="age"
       icon="cake-candles"
       label="Birthday: "
       :value="`${birthday} (${user.dob.age} y.o.)`"
     />
-    <UserInfoItem id="phone" icon="phone" label="Phone: " :value="user.phone" />
-    <UserInfoItem
+    <UserInfoListItem
+      id="phone"
+      icon="phone"
+      label="Phone: "
+      :value="user.phone"
+    />
+    <UserInfoListItem
       id="address"
       icon="location-dot"
       label="Address: "
       :value="address"
     />
-    <UserInfoItem
+    <UserInfoListItem
       id="nationality"
       icon="earth-americas"
       label="Nationality: "
