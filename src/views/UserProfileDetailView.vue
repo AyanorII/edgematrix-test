@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import data from "@/assets/users.json";
+import NotFound from "@/components/NotFound.vue";
 import PageHeading from "@/components/PageHeading.vue";
 import UserInfoList from "@/components/UserProfiles/UserInfoList.vue";
 import UserProfilesList from "@/components/UserProfiles/UserProfilesList.vue";
-import type { User } from "@/lib/interfaces";
 import {
   getFullName,
   getUserById,
   getUserIdFromUrl,
   shuffle,
 } from "@/lib/helpers";
+import type { User } from "@/lib/interfaces";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
@@ -32,34 +33,32 @@ const fullName = computed(() => (user.value ? getFullName(user.value) : ""));
 </script>
 
 <template>
-  <div class="page">
+  <div v-if="user" class="page">
     <RouterLink to="/" class="go-back-button">
       <FontAwesomeIcon icon="chevron-left" />
       Go back
     </RouterLink>
-    <div v-if="user">
-      <div class="user">
-        <img :src="user.picture.large" :alt="fullName" class="user__image" />
-        <div class="right-side">
-          <div class="user__name">
-            <PageHeading>{{ fullName }}</PageHeading>
-            <FontAwesomeIcon
-              :icon="user.gender === 'male' ? 'mars' : 'venus'"
-              size="2x"
-              :style="{ color: user.gender === 'male' ? '#0096FF' : '#DA70D6' }"
-            />
-          </div>
-          <p id="bio">{{ user.bio }}</p>
-          <UserInfoList :user="user" />
+    <div class="user">
+      <img :src="user.picture.large" :alt="fullName" class="user__image" />
+      <div class="right-side">
+        <div class="user__name">
+          <PageHeading>{{ fullName }}</PageHeading>
+          <FontAwesomeIcon
+            :icon="user.gender === 'male' ? 'mars' : 'venus'"
+            size="2x"
+            :style="{ color: user.gender === 'male' ? '#0096FF' : '#DA70D6' }"
+          />
         </div>
-      </div>
-      <div class="users-list">
-        <h2>Other users</h2>
-        <UserProfilesList :users="otherUsers" />
+        <p id="bio">{{ user.bio }}</p>
+        <UserInfoList :user="user" />
       </div>
     </div>
-    <div v-else>User not found</div>
+    <div class="users-list">
+      <h2>Other users</h2>
+      <UserProfilesList :users="otherUsers" />
+    </div>
   </div>
+  <NotFound v-else />
 </template>
 
 <style scoped lang="scss">
