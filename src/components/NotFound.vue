@@ -4,7 +4,7 @@ import PageHeading from "@/components/PageHeading.vue";
 
 <template>
   <div class="not-found">
-    <img src="not-found.png" alt="" class="not-found__illustration" />
+    <img src="/not-found.png" alt="" class="not-found__illustration" />
     <PageHeading> Page not found </PageHeading>
     <RouterLink to="/">Go back</RouterLink>
   </div>
@@ -23,5 +23,4 @@ import PageHeading from "@/components/PageHeading.vue";
     max-width: 500px;
   }
 }
-
 </style>
