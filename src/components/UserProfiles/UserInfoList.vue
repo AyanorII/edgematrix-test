@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { User } from "@/interfaces/user";
 import { getCountry } from "@/lib/helpers";
-import { computed } from "vue";
+import type { RestCountriesApiResponse, User } from "@/lib/interfaces";
+import { computed, onUpdated, ref } from "vue";
 import UserInfoItem from "./UserInfoItem.vue";
 
 const props = defineProps<{
@@ -14,14 +14,31 @@ const birthday = computed(() =>
 
 const address = computed(() => {
   const { street, city, state, country, postcode } = props.user.location;
+
   return `${street.number} ${street.name}, ${city}, ${state}, ${country}, ${postcode}`;
 });
 
-const country = await getCountry(props.user.nat);
-const nationality = computed(
-  () => country.demonyms.eng[props.user.gender === "male" ? "m" : "f"]
-);
-const flag = computed(() => country.flag);
+const nationality = computed(() => {
+  const gender = props.user.gender === "male" ? "m" : "f";
+  return country.value?.demonyms.eng[gender] || "";
+});
+
+const country = ref<RestCountriesApiResponse | null>(null);
+country.value = await getCountry(props.user.nat);
+
+const flag = computed(() => country.value?.flag || "");
+
+onUpdated(async () => {
+  const previousUserCountry = country.value?.cca2;
+  const currentUserCountry = props.user.nat;
+
+  // If the user's country hasn't changed, prevent meaningless data fetching
+  if (previousUserCountry === currentUserCountry) {
+    return;
+  } else {
+    country.value = await getCountry(props.user.nat);
+  }
+});
 </script>
 
 <template>
