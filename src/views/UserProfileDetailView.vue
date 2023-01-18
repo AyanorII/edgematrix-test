@@ -3,20 +3,32 @@ import data from "@/assets/users.json";
 import PageHeading from "@/components/PageHeading.vue";
 import UserInfoList from "@/components/UserProfiles/UserInfoList.vue";
 import UserProfilesList from "@/components/UserProfiles/UserProfilesList.vue";
-import type { User } from "@/interfaces/user";
-import { getFullName, shuffle } from "@/lib/helpers";
+import type { User } from "@/lib/interfaces";
+import {
+  getFullName,
+  getUserById,
+  getUserIdFromUrl,
+  shuffle,
+} from "@/lib/helpers";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { computed } from "vue";
+import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
-const id = route.path.split("/")[1];
-const user = data.find((u) => u.id === id) as unknown as User;
+const id = ref(getUserIdFromUrl(route));
+const user = ref<User | null>(getUserById(id.value));
 
-const otherUsers = data.filter((u) => u.id !== id) as User[];
-const randomUsers = shuffle(otherUsers).slice(0, 4);
+watch(route, (newRoute) => {
+  id.value = getUserIdFromUrl(newRoute);
+  user.value = getUserById(id.value);
+});
 
-const fullName = computed(() => getFullName(user));
+const otherUsers = computed(() => {
+  const users = data.filter((u) => u.id !== id.value) as User[];
+  return shuffle(users).slice(0, 4);
+});
+
+const fullName = computed(() => (user.value ? getFullName(user.value) : ""));
 </script>
 
 <template>
@@ -25,25 +37,28 @@ const fullName = computed(() => getFullName(user));
       <FontAwesomeIcon icon="chevron-left" />
       Go back
     </RouterLink>
-    <div class="user">
-      <img :src="user.picture.large" :alt="fullName" class="user__image" />
-      <div class="right-side">
-        <div class="user__name">
-          <PageHeading>{{ fullName }}</PageHeading>
-          <FontAwesomeIcon
-            :icon="user.gender === 'male' ? 'mars' : 'venus'"
-            size="2x"
-            :style="{ color: user.gender === 'male' ? '#0096FF' : '#DA70D6' }"
-          />
+    <div v-if="user">
+      <div class="user">
+        <img :src="user.picture.large" :alt="fullName" class="user__image" />
+        <div class="right-side">
+          <div class="user__name">
+            <PageHeading>{{ fullName }}</PageHeading>
+            <FontAwesomeIcon
+              :icon="user.gender === 'male' ? 'mars' : 'venus'"
+              size="2x"
+              :style="{ color: user.gender === 'male' ? '#0096FF' : '#DA70D6' }"
+            />
+          </div>
+          <p id="bio">{{ user.bio }}</p>
+          <UserInfoList :user="user" />
         </div>
-        <p id="bio">{{ user.bio }}</p>
-        <UserInfoList :user="user" />
+      </div>
+      <div class="users-list">
+        <h2>Other users</h2>
+        <UserProfilesList :users="otherUsers" />
       </div>
     </div>
-    <div class="users-list">
-      <h2>Other users</h2>
-      <UserProfilesList :users="randomUsers" />
-    </div>
+    <div v-else>User not found</div>
   </div>
 </template>
 
@@ -132,6 +147,5 @@ img {
     font-weight: 600;
     margin-bottom: 1rem;
   }
-
 }
 </style>
