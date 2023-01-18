@@ -1,4 +1,4 @@
-import type { User } from "../../interfaces/user";
+import type { User } from "@/lib/interfaces";
 import { capitalize } from "./capitalize";
 
 export const getFullName = (user: User) => {

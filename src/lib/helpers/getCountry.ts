@@ -1,4 +1,4 @@
-import type { RestCountriesApiResponse } from "../../interfaces";
+import type { RestCountriesApiResponse } from "@/lib/interfaces";
 
 export const getCountry = async (code: string) => {
   const restCountriesApiUrl = "https://restcountries.com/v3.1/alpha/";
