@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { User } from "@/interfaces/user";
+import type { User } from "@/lib/interfaces";
 import { computed } from "vue";
 import { RouterLink } from "vue-router";
 import Card from "../UI/Card.vue";

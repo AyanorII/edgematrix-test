@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import UserProfileCard from "@/components/UserProfiles/UserProfileCard.vue";
-import type { User } from "@/interfaces/user";
+import type { User } from "@/lib/interfaces";
 
 defineProps<{
   users: User[];

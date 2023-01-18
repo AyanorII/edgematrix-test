@@ -4,7 +4,7 @@ import PageHeading from "@/components/PageHeading.vue";
 import Input from "@/components/UI/Input.vue";
 import Select from "@/components/UI/Select.vue";
 import UserProfilesList from "@/components/UserProfiles/UserProfilesList.vue";
-import type { SortByOption, SortOrder, User } from "@/interfaces";
+import type { SortByOption, SortOrder, User } from "@/lib/interfaces";
 import { getFullName, sort } from "@/lib/helpers";
 import { computed, ref } from "vue";
 
